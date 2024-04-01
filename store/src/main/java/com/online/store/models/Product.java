@@ -35,7 +35,6 @@ public class Product {
     protected Product() {
     }
 
-
     public Product(String name, String description, String imageFileName, float priceUSD, String category) {
         this.name = name;
         this.description = description;

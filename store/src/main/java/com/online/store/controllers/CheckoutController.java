@@ -60,7 +60,10 @@ public class CheckoutController {
                     checkoutRequest.getCreditCard());
             orders.add(order);
         }
-        orderService.placeOrders(orders);
+
+        if (orders.size() > 0){
+            orderService.placeOrders(orders);
+        }
         return new ResponseEntity<>("success", HttpStatus.OK);
     }
 

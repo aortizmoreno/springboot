@@ -12,8 +12,12 @@ import com.online.store.services.ProductService;
 @RestController
 public class HomepageController {
 
-    @Autowired
+    // @Autowired
     ProductService productService;
+
+    public HomepageController(ProductService productService){
+        this.productService = productService;
+    }
 
     @GetMapping("/categories")
     public String getProductCategories() {
